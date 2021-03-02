@@ -1,0 +1,788 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7819CC7F25ED42D8003B23F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819CC7E25ED42D8003B23F7 /* AppDelegate.swift */; };
+		7819CC8125ED42D8003B23F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819CC8025ED42D8003B23F7 /* SceneDelegate.swift */; };
+		7819CC8825ED42DB003B23F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7819CC8725ED42DB003B23F7 /* Assets.xcassets */; };
+		7819CC8B25ED42DB003B23F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7819CC8925ED42DB003B23F7 /* LaunchScreen.storyboard */; };
+		7819CC9625ED42DB003B23F7 /* PixelRoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819CC9525ED42DB003B23F7 /* PixelRoomTests.swift */; };
+		7819CCA125ED42DB003B23F7 /* PixelRoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819CCA025ED42DB003B23F7 /* PixelRoomUITests.swift */; };
+		7819CCCD25ED433F003B23F7 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819CCB425ED433F003B23F7 /* GalleryViewController.swift */; };
+		7819CCCE25ED433F003B23F7 /* PhotoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819CCB525ED433F003B23F7 /* PhotoEditorViewController.swift */; };
+		7819CCCF25ED433F003B23F7 /* GalleryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819CCB625ED433F003B23F7 /* GalleryDataSource.swift */; };
+		7819CCD025ED433F003B23F7 /* andrea-rodriguez-tbpzsFkPQCM-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCB825ED433F003B23F7 /* andrea-rodriguez-tbpzsFkPQCM-unsplash.jpg */; };
+		7819CCD125ED433F003B23F7 /* achim-ruhnau-xIGQcvz3f_0-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCB925ED433F003B23F7 /* achim-ruhnau-xIGQcvz3f_0-unsplash.jpg */; };
+		7819CCD225ED433F003B23F7 /* mick-de-paola-QEclLb7W_Y8-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCBA25ED433F003B23F7 /* mick-de-paola-QEclLb7W_Y8-unsplash.jpg */; };
+		7819CCD325ED433F003B23F7 /* lisanto-eE8U6237Tx0-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCBB25ED433F003B23F7 /* lisanto-eE8U6237Tx0-unsplash.jpg */; };
+		7819CCD425ED433F003B23F7 /* jason-blackeye-eMDprfippYw-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCBC25ED433F003B23F7 /* jason-blackeye-eMDprfippYw-unsplash.jpg */; };
+		7819CCD525ED433F003B23F7 /* fabien-martin-AqGhEk1khbE-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCBD25ED433F003B23F7 /* fabien-martin-AqGhEk1khbE-unsplash.jpg */; };
+		7819CCD625ED433F003B23F7 /* lisanto-F-YIt_d4Gbg-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCBE25ED433F003B23F7 /* lisanto-F-YIt_d4Gbg-unsplash.jpg */; };
+		7819CCD725ED433F003B23F7 /* matthijs-van-schuppen-8jGB-ud8MtI-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCBF25ED433F003B23F7 /* matthijs-van-schuppen-8jGB-ud8MtI-unsplash.jpg */; };
+		7819CCD825ED433F003B23F7 /* erfan-ro-JEdHigpgsP0-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCC025ED433F003B23F7 /* erfan-ro-JEdHigpgsP0-unsplash.jpg */; };
+		7819CCD925ED433F003B23F7 /* mick-de-paola-WpNu_erRzs4-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCC125ED433F003B23F7 /* mick-de-paola-WpNu_erRzs4-unsplash.jpg */; };
+		7819CCDA25ED433F003B23F7 /* jon-tyson-NVnKOAqBnKk-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCC225ED433F003B23F7 /* jon-tyson-NVnKOAqBnKk-unsplash.jpg */; };
+		7819CCDB25ED433F003B23F7 /* tobias-reich-QVDHUx_YKPM-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCC325ED433F003B23F7 /* tobias-reich-QVDHUx_YKPM-unsplash.jpg */; };
+		7819CCDC25ED433F003B23F7 /* eric-muhr-CunXJKSts4s-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCC425ED433F003B23F7 /* eric-muhr-CunXJKSts4s-unsplash.jpg */; };
+		7819CCDD25ED433F003B23F7 /* sergio-capuzzimati-y7XJnvGyeQ4-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCC525ED433F003B23F7 /* sergio-capuzzimati-y7XJnvGyeQ4-unsplash.jpg */; };
+		7819CCDE25ED433F003B23F7 /* surya-pratap-Y6Oi_1aGKPg-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCC625ED433F003B23F7 /* surya-pratap-Y6Oi_1aGKPg-unsplash.jpg */; };
+		7819CCDF25ED433F003B23F7 /* marcus-ganahl-JNib6gln56g-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCC725ED433F003B23F7 /* marcus-ganahl-JNib6gln56g-unsplash.jpg */; };
+		7819CCE025ED433F003B23F7 /* remi-bertogliati-7dIggG3yNNI-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCC825ED433F003B23F7 /* remi-bertogliati-7dIggG3yNNI-unsplash.jpg */; };
+		7819CCE125ED433F003B23F7 /* divya-agrawal-nhsrIwaz73M-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCC925ED433F003B23F7 /* divya-agrawal-nhsrIwaz73M-unsplash.jpg */; };
+		7819CCE225ED433F003B23F7 /* nishaan-ahmed-mDQM7TmmcD4-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCCA25ED433F003B23F7 /* nishaan-ahmed-mDQM7TmmcD4-unsplash.jpg */; };
+		7819CCE325ED433F003B23F7 /* camilo-contreras-G4cZjDTGgVk-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCCB25ED433F003B23F7 /* camilo-contreras-G4cZjDTGgVk-unsplash.jpg */; };
+		7819CCE425ED433F003B23F7 /* jason-blackeye-KYGZLF0JWxU-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CCCC25ED433F003B23F7 /* jason-blackeye-KYGZLF0JWxU-unsplash.jpg */; };
+		7819CCFD25ED4963003B23F7 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819CCFC25ED4963003B23F7 /* GalleryCollectionViewCell.swift */; };
+		7819CD0A25ED518A003B23F7 /* xps-2L-0vnCnzcU-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD0125ED518A003B23F7 /* xps-2L-0vnCnzcU-unsplash.jpg */; };
+		7819CD0B25ED518A003B23F7 /* christian-santizo-N8Q3qj6h6_I-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD0225ED518A003B23F7 /* christian-santizo-N8Q3qj6h6_I-unsplash.jpg */; };
+		7819CD0C25ED518A003B23F7 /* mitchell-luo-9Gt8Y6siX4U-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD0325ED518A003B23F7 /* mitchell-luo-9Gt8Y6siX4U-unsplash.jpg */; };
+		7819CD0D25ED518A003B23F7 /* grant-ritchie-QvTJYfO93-c-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD0425ED518A003B23F7 /* grant-ritchie-QvTJYfO93-c-unsplash.jpg */; };
+		7819CD0E25ED518A003B23F7 /* bantersnaps-qjd9_N5fYZ8-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD0525ED518A003B23F7 /* bantersnaps-qjd9_N5fYZ8-unsplash.jpg */; };
+		7819CD0F25ED518A003B23F7 /* burcin-ergunt-VcyiZoO9VHg-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD0625ED518A003B23F7 /* burcin-ergunt-VcyiZoO9VHg-unsplash.jpg */; };
+		7819CD1025ED518A003B23F7 /* elijah-hiett-jlAWAleaAZE-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD0725ED518A003B23F7 /* elijah-hiett-jlAWAleaAZE-unsplash.jpg */; };
+		7819CD1125ED518A003B23F7 /* redcharlie-l8hdir8d02A-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD0825ED518A003B23F7 /* redcharlie-l8hdir8d02A-unsplash.jpg */; };
+		7819CD1225ED518A003B23F7 /* pawel-czerwinski-e_Jx2K_hIpk-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD0925ED518A003B23F7 /* pawel-czerwinski-e_Jx2K_hIpk-unsplash.jpg */; };
+		7819CD1F25ED7061003B23F7 /* PixellateFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819CD1E25ED7061003B23F7 /* PixellateFilter.swift */; };
+		7819CD2925ED8FBF003B23F7 /* jens-johnsson-q5miLeBhCXY-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD2325ED8FBF003B23F7 /* jens-johnsson-q5miLeBhCXY-unsplash.jpg */; };
+		7819CD2A25ED8FBF003B23F7 /* cristina-gottardi-MqGlGvkGBUI-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD2425ED8FBF003B23F7 /* cristina-gottardi-MqGlGvkGBUI-unsplash.jpg */; };
+		7819CD2B25ED8FBF003B23F7 /* surface-tJEsiCVE-TU-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD2525ED8FBF003B23F7 /* surface-tJEsiCVE-TU-unsplash.jpg */; };
+		7819CD2C25ED8FBF003B23F7 /* mitchell-luo--MOGreUeELE-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD2625ED8FBF003B23F7 /* mitchell-luo--MOGreUeELE-unsplash.jpg */; };
+		7819CD2D25ED8FBF003B23F7 /* ethan-7Y9WUs-iRKw-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD2725ED8FBF003B23F7 /* ethan-7Y9WUs-iRKw-unsplash.jpg */; };
+		7819CD2E25ED8FBF003B23F7 /* alex-quezada-COeOJKB1SmM-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD2825ED8FBF003B23F7 /* alex-quezada-COeOJKB1SmM-unsplash.jpg */; };
+		7819CD3325ED9ADA003B23F7 /* PhotoEditorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819CD3225ED9ADA003B23F7 /* PhotoEditorModel.swift */; };
+		7819CD3825EDA375003B23F7 /* PhotoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819CD3725EDA375003B23F7 /* PhotoEditor.swift */; };
+		7819CD5025EDCEFD003B23F7 /* caleb-chen-l9Vrl5RT-jw-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD4F25EDCEFD003B23F7 /* caleb-chen-l9Vrl5RT-jw-unsplash.jpg */; };
+		7819CD5525EDDAF3003B23F7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7819CD5425EDDAF3003B23F7 /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7819CC9225ED42DB003B23F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7819CC7325ED42D8003B23F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7819CC7A25ED42D8003B23F7;
+			remoteInfo = PixelRoom;
+		};
+		7819CC9D25ED42DB003B23F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7819CC7325ED42D8003B23F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7819CC7A25ED42D8003B23F7;
+			remoteInfo = PixelRoom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7819CC7B25ED42D8003B23F7 /* PixelRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7819CC7E25ED42D8003B23F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7819CC8025ED42D8003B23F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7819CC8725ED42DB003B23F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7819CC8A25ED42DB003B23F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7819CC8C25ED42DB003B23F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7819CC9125ED42DB003B23F7 /* PixelRoomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixelRoomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7819CC9525ED42DB003B23F7 /* PixelRoomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelRoomTests.swift; sourceTree = "<group>"; };
+		7819CC9725ED42DB003B23F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7819CC9C25ED42DB003B23F7 /* PixelRoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixelRoomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7819CCA025ED42DB003B23F7 /* PixelRoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelRoomUITests.swift; sourceTree = "<group>"; };
+		7819CCA225ED42DB003B23F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7819CCB425ED433F003B23F7 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		7819CCB525ED433F003B23F7 /* PhotoEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEditorViewController.swift; sourceTree = "<group>"; };
+		7819CCB625ED433F003B23F7 /* GalleryDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDataSource.swift; sourceTree = "<group>"; };
+		7819CCB825ED433F003B23F7 /* andrea-rodriguez-tbpzsFkPQCM-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "andrea-rodriguez-tbpzsFkPQCM-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCB925ED433F003B23F7 /* achim-ruhnau-xIGQcvz3f_0-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "achim-ruhnau-xIGQcvz3f_0-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCBA25ED433F003B23F7 /* mick-de-paola-QEclLb7W_Y8-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mick-de-paola-QEclLb7W_Y8-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCBB25ED433F003B23F7 /* lisanto-eE8U6237Tx0-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lisanto-eE8U6237Tx0-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCBC25ED433F003B23F7 /* jason-blackeye-eMDprfippYw-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jason-blackeye-eMDprfippYw-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCBD25ED433F003B23F7 /* fabien-martin-AqGhEk1khbE-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fabien-martin-AqGhEk1khbE-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCBE25ED433F003B23F7 /* lisanto-F-YIt_d4Gbg-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lisanto-F-YIt_d4Gbg-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCBF25ED433F003B23F7 /* matthijs-van-schuppen-8jGB-ud8MtI-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "matthijs-van-schuppen-8jGB-ud8MtI-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCC025ED433F003B23F7 /* erfan-ro-JEdHigpgsP0-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "erfan-ro-JEdHigpgsP0-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCC125ED433F003B23F7 /* mick-de-paola-WpNu_erRzs4-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mick-de-paola-WpNu_erRzs4-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCC225ED433F003B23F7 /* jon-tyson-NVnKOAqBnKk-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jon-tyson-NVnKOAqBnKk-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCC325ED433F003B23F7 /* tobias-reich-QVDHUx_YKPM-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tobias-reich-QVDHUx_YKPM-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCC425ED433F003B23F7 /* eric-muhr-CunXJKSts4s-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "eric-muhr-CunXJKSts4s-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCC525ED433F003B23F7 /* sergio-capuzzimati-y7XJnvGyeQ4-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sergio-capuzzimati-y7XJnvGyeQ4-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCC625ED433F003B23F7 /* surya-pratap-Y6Oi_1aGKPg-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "surya-pratap-Y6Oi_1aGKPg-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCC725ED433F003B23F7 /* marcus-ganahl-JNib6gln56g-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "marcus-ganahl-JNib6gln56g-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCC825ED433F003B23F7 /* remi-bertogliati-7dIggG3yNNI-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "remi-bertogliati-7dIggG3yNNI-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCC925ED433F003B23F7 /* divya-agrawal-nhsrIwaz73M-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "divya-agrawal-nhsrIwaz73M-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCCA25ED433F003B23F7 /* nishaan-ahmed-mDQM7TmmcD4-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nishaan-ahmed-mDQM7TmmcD4-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCCB25ED433F003B23F7 /* camilo-contreras-G4cZjDTGgVk-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "camilo-contreras-G4cZjDTGgVk-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCCC25ED433F003B23F7 /* jason-blackeye-KYGZLF0JWxU-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jason-blackeye-KYGZLF0JWxU-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CCFC25ED4963003B23F7 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		7819CD0125ED518A003B23F7 /* xps-2L-0vnCnzcU-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "xps-2L-0vnCnzcU-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD0225ED518A003B23F7 /* christian-santizo-N8Q3qj6h6_I-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "christian-santizo-N8Q3qj6h6_I-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD0325ED518A003B23F7 /* mitchell-luo-9Gt8Y6siX4U-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mitchell-luo-9Gt8Y6siX4U-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD0425ED518A003B23F7 /* grant-ritchie-QvTJYfO93-c-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "grant-ritchie-QvTJYfO93-c-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD0525ED518A003B23F7 /* bantersnaps-qjd9_N5fYZ8-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bantersnaps-qjd9_N5fYZ8-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD0625ED518A003B23F7 /* burcin-ergunt-VcyiZoO9VHg-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "burcin-ergunt-VcyiZoO9VHg-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD0725ED518A003B23F7 /* elijah-hiett-jlAWAleaAZE-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "elijah-hiett-jlAWAleaAZE-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD0825ED518A003B23F7 /* redcharlie-l8hdir8d02A-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "redcharlie-l8hdir8d02A-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD0925ED518A003B23F7 /* pawel-czerwinski-e_Jx2K_hIpk-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pawel-czerwinski-e_Jx2K_hIpk-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD1E25ED7061003B23F7 /* PixellateFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixellateFilter.swift; sourceTree = "<group>"; };
+		7819CD2325ED8FBF003B23F7 /* jens-johnsson-q5miLeBhCXY-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jens-johnsson-q5miLeBhCXY-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD2425ED8FBF003B23F7 /* cristina-gottardi-MqGlGvkGBUI-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cristina-gottardi-MqGlGvkGBUI-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD2525ED8FBF003B23F7 /* surface-tJEsiCVE-TU-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "surface-tJEsiCVE-TU-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD2625ED8FBF003B23F7 /* mitchell-luo--MOGreUeELE-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mitchell-luo--MOGreUeELE-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD2725ED8FBF003B23F7 /* ethan-7Y9WUs-iRKw-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ethan-7Y9WUs-iRKw-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD2825ED8FBF003B23F7 /* alex-quezada-COeOJKB1SmM-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "alex-quezada-COeOJKB1SmM-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD3225ED9ADA003B23F7 /* PhotoEditorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditorModel.swift; sourceTree = "<group>"; };
+		7819CD3725EDA375003B23F7 /* PhotoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditor.swift; sourceTree = "<group>"; };
+		7819CD4F25EDCEFD003B23F7 /* caleb-chen-l9Vrl5RT-jw-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "caleb-chen-l9Vrl5RT-jw-unsplash.jpg"; sourceTree = "<group>"; };
+		7819CD5425EDDAF3003B23F7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7819CC7825ED42D8003B23F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7819CC8E25ED42DB003B23F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7819CC9925ED42DB003B23F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7819CC7225ED42D8003B23F7 = {
+			isa = PBXGroup;
+			children = (
+				7819CD5425EDDAF3003B23F7 /* README.md */,
+				7819CC7D25ED42D8003B23F7 /* PixelRoom */,
+				7819CC9425ED42DB003B23F7 /* PixelRoomTests */,
+				7819CC9F25ED42DB003B23F7 /* PixelRoomUITests */,
+				7819CC7C25ED42D8003B23F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7819CC7C25ED42D8003B23F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7819CC7B25ED42D8003B23F7 /* PixelRoom.app */,
+				7819CC9125ED42DB003B23F7 /* PixelRoomTests.xctest */,
+				7819CC9C25ED42DB003B23F7 /* PixelRoomUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7819CC7D25ED42D8003B23F7 /* PixelRoom */ = {
+			isa = PBXGroup;
+			children = (
+				7819CC7E25ED42D8003B23F7 /* AppDelegate.swift */,
+				7819CC8025ED42D8003B23F7 /* SceneDelegate.swift */,
+				7819CCE825ED435C003B23F7 /* Gallery */,
+				7819CCE925ED4369003B23F7 /* Photo Editor */,
+				7819CCB725ED433F003B23F7 /* Bundled Photo Library */,
+				7819CC8725ED42DB003B23F7 /* Assets.xcassets */,
+				7819CC8925ED42DB003B23F7 /* LaunchScreen.storyboard */,
+				7819CC8C25ED42DB003B23F7 /* Info.plist */,
+			);
+			path = PixelRoom;
+			sourceTree = "<group>";
+		};
+		7819CC9425ED42DB003B23F7 /* PixelRoomTests */ = {
+			isa = PBXGroup;
+			children = (
+				7819CC9525ED42DB003B23F7 /* PixelRoomTests.swift */,
+				7819CC9725ED42DB003B23F7 /* Info.plist */,
+			);
+			path = PixelRoomTests;
+			sourceTree = "<group>";
+		};
+		7819CC9F25ED42DB003B23F7 /* PixelRoomUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7819CCA025ED42DB003B23F7 /* PixelRoomUITests.swift */,
+				7819CCA225ED42DB003B23F7 /* Info.plist */,
+			);
+			path = PixelRoomUITests;
+			sourceTree = "<group>";
+		};
+		7819CCB725ED433F003B23F7 /* Bundled Photo Library */ = {
+			isa = PBXGroup;
+			children = (
+				7819CD4F25EDCEFD003B23F7 /* caleb-chen-l9Vrl5RT-jw-unsplash.jpg */,
+				7819CD2825ED8FBF003B23F7 /* alex-quezada-COeOJKB1SmM-unsplash.jpg */,
+				7819CD2425ED8FBF003B23F7 /* cristina-gottardi-MqGlGvkGBUI-unsplash.jpg */,
+				7819CD2725ED8FBF003B23F7 /* ethan-7Y9WUs-iRKw-unsplash.jpg */,
+				7819CD2325ED8FBF003B23F7 /* jens-johnsson-q5miLeBhCXY-unsplash.jpg */,
+				7819CD2625ED8FBF003B23F7 /* mitchell-luo--MOGreUeELE-unsplash.jpg */,
+				7819CD2525ED8FBF003B23F7 /* surface-tJEsiCVE-TU-unsplash.jpg */,
+				7819CD0525ED518A003B23F7 /* bantersnaps-qjd9_N5fYZ8-unsplash.jpg */,
+				7819CD0625ED518A003B23F7 /* burcin-ergunt-VcyiZoO9VHg-unsplash.jpg */,
+				7819CD0225ED518A003B23F7 /* christian-santizo-N8Q3qj6h6_I-unsplash.jpg */,
+				7819CD0725ED518A003B23F7 /* elijah-hiett-jlAWAleaAZE-unsplash.jpg */,
+				7819CD0425ED518A003B23F7 /* grant-ritchie-QvTJYfO93-c-unsplash.jpg */,
+				7819CD0325ED518A003B23F7 /* mitchell-luo-9Gt8Y6siX4U-unsplash.jpg */,
+				7819CD0925ED518A003B23F7 /* pawel-czerwinski-e_Jx2K_hIpk-unsplash.jpg */,
+				7819CD0825ED518A003B23F7 /* redcharlie-l8hdir8d02A-unsplash.jpg */,
+				7819CD0125ED518A003B23F7 /* xps-2L-0vnCnzcU-unsplash.jpg */,
+				7819CCB825ED433F003B23F7 /* andrea-rodriguez-tbpzsFkPQCM-unsplash.jpg */,
+				7819CCB925ED433F003B23F7 /* achim-ruhnau-xIGQcvz3f_0-unsplash.jpg */,
+				7819CCBA25ED433F003B23F7 /* mick-de-paola-QEclLb7W_Y8-unsplash.jpg */,
+				7819CCBB25ED433F003B23F7 /* lisanto-eE8U6237Tx0-unsplash.jpg */,
+				7819CCBC25ED433F003B23F7 /* jason-blackeye-eMDprfippYw-unsplash.jpg */,
+				7819CCBD25ED433F003B23F7 /* fabien-martin-AqGhEk1khbE-unsplash.jpg */,
+				7819CCBE25ED433F003B23F7 /* lisanto-F-YIt_d4Gbg-unsplash.jpg */,
+				7819CCBF25ED433F003B23F7 /* matthijs-van-schuppen-8jGB-ud8MtI-unsplash.jpg */,
+				7819CCC025ED433F003B23F7 /* erfan-ro-JEdHigpgsP0-unsplash.jpg */,
+				7819CCC125ED433F003B23F7 /* mick-de-paola-WpNu_erRzs4-unsplash.jpg */,
+				7819CCC225ED433F003B23F7 /* jon-tyson-NVnKOAqBnKk-unsplash.jpg */,
+				7819CCC325ED433F003B23F7 /* tobias-reich-QVDHUx_YKPM-unsplash.jpg */,
+				7819CCC425ED433F003B23F7 /* eric-muhr-CunXJKSts4s-unsplash.jpg */,
+				7819CCC525ED433F003B23F7 /* sergio-capuzzimati-y7XJnvGyeQ4-unsplash.jpg */,
+				7819CCC625ED433F003B23F7 /* surya-pratap-Y6Oi_1aGKPg-unsplash.jpg */,
+				7819CCC725ED433F003B23F7 /* marcus-ganahl-JNib6gln56g-unsplash.jpg */,
+				7819CCC825ED433F003B23F7 /* remi-bertogliati-7dIggG3yNNI-unsplash.jpg */,
+				7819CCC925ED433F003B23F7 /* divya-agrawal-nhsrIwaz73M-unsplash.jpg */,
+				7819CCCA25ED433F003B23F7 /* nishaan-ahmed-mDQM7TmmcD4-unsplash.jpg */,
+				7819CCCB25ED433F003B23F7 /* camilo-contreras-G4cZjDTGgVk-unsplash.jpg */,
+				7819CCCC25ED433F003B23F7 /* jason-blackeye-KYGZLF0JWxU-unsplash.jpg */,
+			);
+			path = "Bundled Photo Library";
+			sourceTree = "<group>";
+		};
+		7819CCE825ED435C003B23F7 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				7819CCB625ED433F003B23F7 /* GalleryDataSource.swift */,
+				7819CCB425ED433F003B23F7 /* GalleryViewController.swift */,
+				7819CCFC25ED4963003B23F7 /* GalleryCollectionViewCell.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		7819CCE925ED4369003B23F7 /* Photo Editor */ = {
+			isa = PBXGroup;
+			children = (
+				7819CD3725EDA375003B23F7 /* PhotoEditor.swift */,
+				7819CD3225ED9ADA003B23F7 /* PhotoEditorModel.swift */,
+				7819CCB525ED433F003B23F7 /* PhotoEditorViewController.swift */,
+				7819CD1E25ED7061003B23F7 /* PixellateFilter.swift */,
+			);
+			path = "Photo Editor";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7819CC7A25ED42D8003B23F7 /* PixelRoom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7819CCA525ED42DB003B23F7 /* Build configuration list for PBXNativeTarget "PixelRoom" */;
+			buildPhases = (
+				7819CC7725ED42D8003B23F7 /* Sources */,
+				7819CC7825ED42D8003B23F7 /* Frameworks */,
+				7819CC7925ED42D8003B23F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PixelRoom;
+			productName = PixelRoom;
+			productReference = 7819CC7B25ED42D8003B23F7 /* PixelRoom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7819CC9025ED42DB003B23F7 /* PixelRoomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7819CCA825ED42DB003B23F7 /* Build configuration list for PBXNativeTarget "PixelRoomTests" */;
+			buildPhases = (
+				7819CC8D25ED42DB003B23F7 /* Sources */,
+				7819CC8E25ED42DB003B23F7 /* Frameworks */,
+				7819CC8F25ED42DB003B23F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7819CC9325ED42DB003B23F7 /* PBXTargetDependency */,
+			);
+			name = PixelRoomTests;
+			productName = PixelRoomTests;
+			productReference = 7819CC9125ED42DB003B23F7 /* PixelRoomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7819CC9B25ED42DB003B23F7 /* PixelRoomUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7819CCAB25ED42DB003B23F7 /* Build configuration list for PBXNativeTarget "PixelRoomUITests" */;
+			buildPhases = (
+				7819CC9825ED42DB003B23F7 /* Sources */,
+				7819CC9925ED42DB003B23F7 /* Frameworks */,
+				7819CC9A25ED42DB003B23F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7819CC9E25ED42DB003B23F7 /* PBXTargetDependency */,
+			);
+			name = PixelRoomUITests;
+			productName = PixelRoomUITests;
+			productReference = 7819CC9C25ED42DB003B23F7 /* PixelRoomUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7819CC7325ED42D8003B23F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					7819CC7A25ED42D8003B23F7 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					7819CC9025ED42DB003B23F7 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 7819CC7A25ED42D8003B23F7;
+					};
+					7819CC9B25ED42DB003B23F7 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 7819CC7A25ED42D8003B23F7;
+					};
+				};
+			};
+			buildConfigurationList = 7819CC7625ED42D8003B23F7 /* Build configuration list for PBXProject "PixelRoom" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7819CC7225ED42D8003B23F7;
+			productRefGroup = 7819CC7C25ED42D8003B23F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7819CC7A25ED42D8003B23F7 /* PixelRoom */,
+				7819CC9025ED42DB003B23F7 /* PixelRoomTests */,
+				7819CC9B25ED42DB003B23F7 /* PixelRoomUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7819CC7925ED42D8003B23F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7819CD0A25ED518A003B23F7 /* xps-2L-0vnCnzcU-unsplash.jpg in Resources */,
+				7819CCD825ED433F003B23F7 /* erfan-ro-JEdHigpgsP0-unsplash.jpg in Resources */,
+				7819CD2C25ED8FBF003B23F7 /* mitchell-luo--MOGreUeELE-unsplash.jpg in Resources */,
+				7819CCE425ED433F003B23F7 /* jason-blackeye-KYGZLF0JWxU-unsplash.jpg in Resources */,
+				7819CD2A25ED8FBF003B23F7 /* cristina-gottardi-MqGlGvkGBUI-unsplash.jpg in Resources */,
+				7819CC8B25ED42DB003B23F7 /* LaunchScreen.storyboard in Resources */,
+				7819CCD625ED433F003B23F7 /* lisanto-F-YIt_d4Gbg-unsplash.jpg in Resources */,
+				7819CD0F25ED518A003B23F7 /* burcin-ergunt-VcyiZoO9VHg-unsplash.jpg in Resources */,
+				7819CD2925ED8FBF003B23F7 /* jens-johnsson-q5miLeBhCXY-unsplash.jpg in Resources */,
+				7819CCD225ED433F003B23F7 /* mick-de-paola-QEclLb7W_Y8-unsplash.jpg in Resources */,
+				7819CCDB25ED433F003B23F7 /* tobias-reich-QVDHUx_YKPM-unsplash.jpg in Resources */,
+				7819CCD925ED433F003B23F7 /* mick-de-paola-WpNu_erRzs4-unsplash.jpg in Resources */,
+				7819CD2D25ED8FBF003B23F7 /* ethan-7Y9WUs-iRKw-unsplash.jpg in Resources */,
+				7819CD0D25ED518A003B23F7 /* grant-ritchie-QvTJYfO93-c-unsplash.jpg in Resources */,
+				7819CCDF25ED433F003B23F7 /* marcus-ganahl-JNib6gln56g-unsplash.jpg in Resources */,
+				7819CCE125ED433F003B23F7 /* divya-agrawal-nhsrIwaz73M-unsplash.jpg in Resources */,
+				7819CCDC25ED433F003B23F7 /* eric-muhr-CunXJKSts4s-unsplash.jpg in Resources */,
+				7819CCD325ED433F003B23F7 /* lisanto-eE8U6237Tx0-unsplash.jpg in Resources */,
+				7819CCE325ED433F003B23F7 /* camilo-contreras-G4cZjDTGgVk-unsplash.jpg in Resources */,
+				7819CCD025ED433F003B23F7 /* andrea-rodriguez-tbpzsFkPQCM-unsplash.jpg in Resources */,
+				7819CD0E25ED518A003B23F7 /* bantersnaps-qjd9_N5fYZ8-unsplash.jpg in Resources */,
+				7819CCDD25ED433F003B23F7 /* sergio-capuzzimati-y7XJnvGyeQ4-unsplash.jpg in Resources */,
+				7819CD5525EDDAF3003B23F7 /* README.md in Resources */,
+				7819CCD125ED433F003B23F7 /* achim-ruhnau-xIGQcvz3f_0-unsplash.jpg in Resources */,
+				7819CD1125ED518A003B23F7 /* redcharlie-l8hdir8d02A-unsplash.jpg in Resources */,
+				7819CD1025ED518A003B23F7 /* elijah-hiett-jlAWAleaAZE-unsplash.jpg in Resources */,
+				7819CD2B25ED8FBF003B23F7 /* surface-tJEsiCVE-TU-unsplash.jpg in Resources */,
+				7819CCD425ED433F003B23F7 /* jason-blackeye-eMDprfippYw-unsplash.jpg in Resources */,
+				7819CCDE25ED433F003B23F7 /* surya-pratap-Y6Oi_1aGKPg-unsplash.jpg in Resources */,
+				7819CCE225ED433F003B23F7 /* nishaan-ahmed-mDQM7TmmcD4-unsplash.jpg in Resources */,
+				7819CCE025ED433F003B23F7 /* remi-bertogliati-7dIggG3yNNI-unsplash.jpg in Resources */,
+				7819CCD725ED433F003B23F7 /* matthijs-van-schuppen-8jGB-ud8MtI-unsplash.jpg in Resources */,
+				7819CD0B25ED518A003B23F7 /* christian-santizo-N8Q3qj6h6_I-unsplash.jpg in Resources */,
+				7819CD5025EDCEFD003B23F7 /* caleb-chen-l9Vrl5RT-jw-unsplash.jpg in Resources */,
+				7819CCD525ED433F003B23F7 /* fabien-martin-AqGhEk1khbE-unsplash.jpg in Resources */,
+				7819CD0C25ED518A003B23F7 /* mitchell-luo-9Gt8Y6siX4U-unsplash.jpg in Resources */,
+				7819CD1225ED518A003B23F7 /* pawel-czerwinski-e_Jx2K_hIpk-unsplash.jpg in Resources */,
+				7819CCDA25ED433F003B23F7 /* jon-tyson-NVnKOAqBnKk-unsplash.jpg in Resources */,
+				7819CC8825ED42DB003B23F7 /* Assets.xcassets in Resources */,
+				7819CD2E25ED8FBF003B23F7 /* alex-quezada-COeOJKB1SmM-unsplash.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7819CC8F25ED42DB003B23F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7819CC9A25ED42DB003B23F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7819CC7725ED42D8003B23F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7819CD3825EDA375003B23F7 /* PhotoEditor.swift in Sources */,
+				7819CCCD25ED433F003B23F7 /* GalleryViewController.swift in Sources */,
+				7819CCFD25ED4963003B23F7 /* GalleryCollectionViewCell.swift in Sources */,
+				7819CC7F25ED42D8003B23F7 /* AppDelegate.swift in Sources */,
+				7819CD3325ED9ADA003B23F7 /* PhotoEditorModel.swift in Sources */,
+				7819CCCE25ED433F003B23F7 /* PhotoEditorViewController.swift in Sources */,
+				7819CD1F25ED7061003B23F7 /* PixellateFilter.swift in Sources */,
+				7819CCCF25ED433F003B23F7 /* GalleryDataSource.swift in Sources */,
+				7819CC8125ED42D8003B23F7 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7819CC8D25ED42DB003B23F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7819CC9625ED42DB003B23F7 /* PixelRoomTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7819CC9825ED42DB003B23F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7819CCA125ED42DB003B23F7 /* PixelRoomUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7819CC9325ED42DB003B23F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7819CC7A25ED42D8003B23F7 /* PixelRoom */;
+			targetProxy = 7819CC9225ED42DB003B23F7 /* PBXContainerItemProxy */;
+		};
+		7819CC9E25ED42DB003B23F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7819CC7A25ED42D8003B23F7 /* PixelRoom */;
+			targetProxy = 7819CC9D25ED42DB003B23F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7819CC8925ED42DB003B23F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7819CC8A25ED42DB003B23F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7819CCA325ED42DB003B23F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7819CCA425ED42DB003B23F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7819CCA625ED42DB003B23F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6H6GQ2FPBM;
+				INFOPLIST_FILE = PixelRoom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.bergen.PixelRoom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7819CCA725ED42DB003B23F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6H6GQ2FPBM;
+				INFOPLIST_FILE = PixelRoom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.bergen.PixelRoom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7819CCA925ED42DB003B23F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6H6GQ2FPBM;
+				INFOPLIST_FILE = PixelRoomTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.bergen.PixelRoomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PixelRoom.app/PixelRoom";
+			};
+			name = Debug;
+		};
+		7819CCAA25ED42DB003B23F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6H6GQ2FPBM;
+				INFOPLIST_FILE = PixelRoomTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.bergen.PixelRoomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PixelRoom.app/PixelRoom";
+			};
+			name = Release;
+		};
+		7819CCAC25ED42DB003B23F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6H6GQ2FPBM;
+				INFOPLIST_FILE = PixelRoomUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.bergen.PixelRoomUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PixelRoom;
+			};
+			name = Debug;
+		};
+		7819CCAD25ED42DB003B23F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6H6GQ2FPBM;
+				INFOPLIST_FILE = PixelRoomUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.bergen.PixelRoomUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PixelRoom;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7819CC7625ED42D8003B23F7 /* Build configuration list for PBXProject "PixelRoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7819CCA325ED42DB003B23F7 /* Debug */,
+				7819CCA425ED42DB003B23F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7819CCA525ED42DB003B23F7 /* Build configuration list for PBXNativeTarget "PixelRoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7819CCA625ED42DB003B23F7 /* Debug */,
+				7819CCA725ED42DB003B23F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7819CCA825ED42DB003B23F7 /* Build configuration list for PBXNativeTarget "PixelRoomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7819CCA925ED42DB003B23F7 /* Debug */,
+				7819CCAA25ED42DB003B23F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7819CCAB25ED42DB003B23F7 /* Build configuration list for PBXNativeTarget "PixelRoomUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7819CCAC25ED42DB003B23F7 /* Debug */,
+				7819CCAD25ED42DB003B23F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7819CC7325ED42D8003B23F7 /* Project object */;
+}
