@@ -99,8 +99,9 @@ class PhotoEditorViewController: UIViewController, PhotoEditorView {
             imageView.widthAnchor.constraint(equalTo: stackView.widthAnchor),
             scaleSliderStackView.widthAnchor.constraint(equalTo: stackView.widthAnchor, constant: -60),
             scaleSliderStackView.heightAnchor.constraint(equalToConstant: 120),
-            valueLabel.widthAnchor.constraint(equalToConstant: 25)
+            valueLabel.widthAnchor.constraint(equalToConstant: 50)
         ])
+        valueLabel.adjustsFontSizeToFitWidth = true
     }
     
     @objc
