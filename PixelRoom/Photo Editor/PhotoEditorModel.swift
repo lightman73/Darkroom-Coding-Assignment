@@ -89,9 +89,10 @@ extension UIImage {
         guard let image = UIImage(contentsOfFile: url.path) else {
             return nil
         }
+        
         let scale = max(maxSize.width / image.size.width, maxSize.height / image.size.height)
         let renderSize = CGSize(
-            width: image.size.height * scale,
+            width: image.size.width * scale,
             height: image.size.height * scale
         )
         let renderer = UIGraphicsImageRenderer(size: renderSize)
