@@ -51,11 +51,10 @@ class GalleryDataSource {
                     let url = URL(fileURLWithPath: $0)
                     let name = url.deletingPathExtension().lastPathComponent
                     guard name.contains(Constants.bundledPhotoNameTag),
-                          let data = try? Data(contentsOf: url),
-                          let image = UIImage(data: data) else {
+                          let data = try? Data(contentsOf: url) else {
                         return nil
                     }
-                    return PhotoItem(name: name, thumbnail: image, url: url)
+                    return PhotoItem(name: name, thumbnail: self.createThumbnail(from: data), url: url)
                 }.shuffled()
             
             let featuredItems = allItems.prefix(Constants.featuredCount)
