@@ -16,6 +16,14 @@ class PixellateFilter {
               let filter = internalFilter else {
             return nil
         }
+        
+        // CFPixellate requires a minimum inputScale value of 1.0
+        // If inputScale is less than 1.0, let's return the original
+        // image and don't apply the filter
+        if inputScale < 1.0 {
+            return image
+        }
+        
         let inputImage = CIImage(cgImage: inputCGImage)
         let center = CGPoint(x: inputImage.extent.width / 2, y: inputImage.extent.height / 2)
         filter.setValue(inputImage, forKey: kCIInputImageKey)

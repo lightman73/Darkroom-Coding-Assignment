@@ -8,6 +8,9 @@
 import UIKit
 
 class PhotoEditorModel: PhotoEditorModelProtocol {
+    private enum Constants {
+        static let pixellateUserDefaultKey: String = "inputScale"
+    }
     
     private let item: PhotoItem
     private let view: PhotoEditorView
@@ -67,13 +70,13 @@ class PhotoEditorModel: PhotoEditorModelProtocol {
     
     func storePixellateEdits() {
         let userDefaults = UserDefaults.standard
-        userDefaults.setValue(pixellateInputScaleValue, forKey: "inputscale")
+        userDefaults.setValue(pixellateInputScaleValue, forKey: Constants.pixellateUserDefaultKey)
         userDefaults.synchronize()
     }
     
     func loadPixellateEdits() {
         let userDefaults = UserDefaults.standard
-        pixellateInputScaleValue = userDefaults.float(forKey: "inputScale")
+        pixellateInputScaleValue = userDefaults.float(forKey: Constants.pixellateUserDefaultKey)
         
     }
 }
@@ -86,9 +89,10 @@ extension UIImage {
         guard let image = UIImage(contentsOfFile: url.path) else {
             return nil
         }
+        
         let scale = max(maxSize.width / image.size.width, maxSize.height / image.size.height)
         let renderSize = CGSize(
-            width: image.size.height * scale,
+            width: image.size.width * scale,
             height: image.size.height * scale
         )
         let renderer = UIGraphicsImageRenderer(size: renderSize)
