@@ -91,9 +91,11 @@ class GalleryViewController: UIViewController {
         activityIndicator.alpha = 1.0
         activityIndicator.startAnimating()
         photoDataSource.reloadPhotos {
-            self.activityIndicator.stopAnimating()
-            self.activityIndicator.alpha = 0
-            self.collectionView.reloadData()
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.alpha = 0
+                self.collectionView.reloadData()
+            }
         }
     }
 }
