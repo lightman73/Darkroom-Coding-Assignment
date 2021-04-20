@@ -53,8 +53,8 @@ class PhotoEditorViewController: UIViewController, PhotoEditorView {
         view.backgroundColor = .black
         view.addSubview(stackView)
         setupStackView()
-        updateValueLabel()
         setupScaleSlider()
+        updateValueLabel()
         setupImageView()
         setupLayout()
     }
