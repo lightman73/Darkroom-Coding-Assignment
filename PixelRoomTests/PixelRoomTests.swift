@@ -55,4 +55,24 @@ class PixelRoomTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 30.0)
     }
+    
+    func testPhotoEditorModel() throws {
+        // ran out of time, but in order to test the PhotoEditorModel
+        // I would first create a PhotoItem with a know image,
+        // mock the PhotoEditorView,
+        // call editorDidChangePixellateInputScaleValue with a known
+        // parameter
+        // compare the resulting edited image with a previously
+        // edited version to check for differences (note: this would
+        // work only for deterministic filters; e.g., it wouldn't work
+        // with CIRandomGenerator combined with any compositional
+        // filter)
+        // storePixellateEdits and loadPixellateEdits could be tested if
+        // decoupled from UserDefaults.standard (i.e., passing
+        // UserDefaults.standard to the PhotoEditorModel initializer as a
+        // parameter, so as to be able to, during the tests, create
+        // an instance of UserDefaults and use it for the tests) [this
+        // particular test could've catched the different (string) keys
+        // that were present in the code (see commit 2be0863)]
+    }
 }
