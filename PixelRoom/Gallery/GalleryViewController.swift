@@ -16,8 +16,7 @@ class GalleryViewController: UIViewController {
     }
 
     private let photoDataSource: GalleryDataSource
-    private let flowLayout: UICollectionViewFlowLayout
-    private let collectionView: UICollectionView
+    private var collectionView: UICollectionView!
     private let activityIndicator = UIActivityIndicatorView(style: .large)
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -30,13 +29,12 @@ class GalleryViewController: UIViewController {
     
     init() {
         photoDataSource = GalleryDataSource()
-        flowLayout = UICollectionViewFlowLayout()
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         super.init(nibName: nil, bundle: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: compositionalLayout())
         setupSubviews()
         setupLayout()
         reloadData()
@@ -63,14 +61,6 @@ class GalleryViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.cellIdentifier)
-        setupCollectionViewLayout()
-    }
-    
-    private func setupCollectionViewLayout() {
-        flowLayout.minimumInteritemSpacing = Constants.interitemSpacing
-        flowLayout.minimumLineSpacing = Constants.interitemSpacing
-        flowLayout.scrollDirection = .vertical
-        flowLayout.sectionInset = UIEdgeInsets(top: Constants.sectionSpacing, left: 0, bottom: Constants.sectionSpacing, right: 0)
     }
     
     private func setupLayout() {
@@ -97,6 +87,46 @@ class GalleryViewController: UIViewController {
                 self.collectionView.reloadData()
             }
         }
+    }
+    
+    // MARK: - UICollectionViewCompositionalLayout functions
+    
+    func compositionalLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { (section: Int, environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            switch section {
+            case 0:
+                return self.buildLayout(itemsPerLine: 2, halfHeight: true, shouldScrollHorizontally: true)
+            case 1:
+                return self.buildLayout(itemsPerLine: 4, halfHeight: true, shouldScrollHorizontally: true)
+            default:
+                return self.buildLayout(itemsPerLine: 5)
+            }
+        }
+        return layout
+    }
+    
+    func buildLayout(itemsPerLine: Int, halfHeight: Bool = false, shouldScrollHorizontally: Bool = false) -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/CGFloat(itemsPerLine)),
+                                              heightDimension: .fractionalHeight(1.0))
+        let fullPhotoItem = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        fullPhotoItem.contentInsets = NSDirectionalEdgeInsets(top: Constants.interitemSpacing / 2,
+                                                              leading: Constants.interitemSpacing / 2,
+                                                              bottom: Constants.interitemSpacing / 2,
+                                                              trailing: Constants.interitemSpacing / 2)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .fractionalWidth(1/(CGFloat(itemsPerLine) * (halfHeight ? 2 : 1))))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                       subitem: fullPhotoItem,
+                                                       count: itemsPerLine)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: Constants.sectionSpacing,
+                                                        leading: 0,
+                                                        bottom: Constants.sectionSpacing,
+                                                        trailing: 0)
+        section.orthogonalScrollingBehavior = shouldScrollHorizontally ? .continuousGroupLeadingBoundary : .none
+        return section
     }
 }
 
@@ -131,29 +161,4 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
         collectionView.deselectItem(at: indexPath, animated: true)
     }
     
-}
-
-// MARK: - UICollectionViewDelegateFlowLayout
-
-extension GalleryViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let style = photoDataSource.sectionStyleForSecton(indexPath.section)
-        switch style {
-        case.featured:
-            let width = (collectionView.frame.size.width - Constants.interitemSpacing) / 2
-            let height = width / 2
-            return CGSize(width: width, height: height)
-            
-        case .featuredFooter:
-            let width = (collectionView.frame.size.width - 3 * Constants.interitemSpacing) / 4
-            let height = width / 2
-            return CGSize(width: width, height: height)
-        
-        case .normal:
-            let width = (collectionView.frame.size.width - 4 * Constants.interitemSpacing) / 5
-            let height = width
-            return CGSize(width: width, height: height)
-        }
-    }
 }
