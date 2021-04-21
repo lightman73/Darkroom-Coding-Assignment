@@ -95,9 +95,9 @@ class GalleryViewController: UIViewController {
         let layout = UICollectionViewCompositionalLayout { (section: Int, environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
             switch section {
             case 0:
-                return self.buildLayout(itemsPerLine: 2, halfHeight: true)
+                return self.buildLayout(itemsPerLine: 2, halfHeight: true, shouldScrollHorizontally: true)
             case 1:
-                return self.buildLayout(itemsPerLine: 4, halfHeight: true)
+                return self.buildLayout(itemsPerLine: 4, halfHeight: true, shouldScrollHorizontally: true)
             default:
                 return self.buildLayout(itemsPerLine: 5)
             }
@@ -105,7 +105,7 @@ class GalleryViewController: UIViewController {
         return layout
     }
     
-    func buildLayout(itemsPerLine: Int, halfHeight: Bool = false) -> NSCollectionLayoutSection {
+    func buildLayout(itemsPerLine: Int, halfHeight: Bool = false, shouldScrollHorizontally: Bool = false) -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/CGFloat(itemsPerLine)),
                                               heightDimension: .fractionalHeight(1.0))
         let fullPhotoItem = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -125,6 +125,7 @@ class GalleryViewController: UIViewController {
                                                         leading: 0,
                                                         bottom: Constants.sectionSpacing,
                                                         trailing: 0)
+        section.orthogonalScrollingBehavior = shouldScrollHorizontally ? .continuousGroupLeadingBoundary : .none
         return section
     }
 }
