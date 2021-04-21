@@ -91,7 +91,7 @@ class GalleryViewController: UIViewController {
     
     // MARK: - UICollectionViewCompositionalLayout functions
     
-    func compositionalLayout() -> UICollectionViewLayout {
+    private func compositionalLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (section: Int, environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
             switch section {
             case 0:
@@ -105,7 +105,7 @@ class GalleryViewController: UIViewController {
         return layout
     }
     
-    func buildLayout(itemsPerLine: Int, halfHeight: Bool = false, shouldScrollHorizontally: Bool = false) -> NSCollectionLayoutSection {
+    private func buildLayout(itemsPerLine: Int, halfHeight: Bool = false, shouldScrollHorizontally: Bool = false) -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/CGFloat(itemsPerLine)),
                                               heightDimension: .fractionalHeight(1.0))
         let fullPhotoItem = NSCollectionLayoutItem(layoutSize: itemSize)
