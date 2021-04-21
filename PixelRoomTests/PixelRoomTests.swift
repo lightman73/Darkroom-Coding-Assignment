@@ -30,4 +30,29 @@ class PixelRoomTests: XCTestCase {
         }
     }
 
+    // MARK: - Some simple tests
+    func testGalleryDataSource() throws {
+        let datasource = GalleryDataSource()
+        
+        let expectation = XCTestExpectation(description: "Should load all images")
+        datasource.reloadPhotos {
+            XCTAssertEqual(datasource.numberOfSections, 3)
+            XCTAssertEqual(datasource.numberOfItemsInSection(0), 5)
+            XCTAssertEqual(datasource.numberOfItemsInSection(1), 6)
+            
+            // Let's check that all items have a name,
+            // url, and generated thumbnail
+            for section in 0..<datasource.numberOfSections {
+                for index in 0..<datasource.numberOfItemsInSection(section) {
+                    let item = datasource.item(at: index, inSection: section)
+                    XCTAssertNotNil(item)
+                    XCTAssertNotNil(item.name)
+                    XCTAssertNotNil(item.thumbnail)
+                    XCTAssertNotNil(item.url)
+                }
+            }
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 30.0)
+    }
 }
