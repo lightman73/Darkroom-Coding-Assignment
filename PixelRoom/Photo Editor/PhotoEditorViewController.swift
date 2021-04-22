@@ -53,8 +53,8 @@ class PhotoEditorViewController: UIViewController, PhotoEditorView {
         view.backgroundColor = .black
         view.addSubview(stackView)
         setupStackView()
-        updateValueLabel()
         setupScaleSlider()
+        updateValueLabel()
         setupImageView()
         setupLayout()
     }
@@ -80,9 +80,9 @@ class PhotoEditorViewController: UIViewController, PhotoEditorView {
         scaleSliderStackView.spacing = 16
         scaleSliderStackView.addArrangedSubview(scaleSlider)
         scaleSliderStackView.addArrangedSubview(valueLabel)
-        scaleSlider.value = model?.currentPixellateInputScaleValue ?? 0.0
         scaleSlider.minimumValue = 0.0
         scaleSlider.maximumValue = 50.0
+        scaleSlider.value = model?.currentPixellateInputScaleValue ?? 0.0
         scaleSlider.tintColor = .orange
         scaleSlider.thumbTintColor = .darkGray
         scaleSlider .addTarget(self, action: #selector(sliderChanged(_:)), for: .valueChanged)
@@ -99,8 +99,9 @@ class PhotoEditorViewController: UIViewController, PhotoEditorView {
             imageView.widthAnchor.constraint(equalTo: stackView.widthAnchor),
             scaleSliderStackView.widthAnchor.constraint(equalTo: stackView.widthAnchor, constant: -60),
             scaleSliderStackView.heightAnchor.constraint(equalToConstant: 120),
-            valueLabel.widthAnchor.constraint(equalToConstant: 25)
+            valueLabel.widthAnchor.constraint(equalToConstant: 50)
         ])
+        valueLabel.adjustsFontSizeToFitWidth = true
     }
     
     @objc

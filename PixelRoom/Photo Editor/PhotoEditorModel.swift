@@ -8,6 +8,9 @@
 import UIKit
 
 class PhotoEditorModel: PhotoEditorModelProtocol {
+    private enum Constants {
+        static let pixellateUserDefaultKeyPrefix: String = "inputScaleFor"
+    }
     
     private let item: PhotoItem
     private let view: PhotoEditorView
@@ -17,6 +20,12 @@ class PhotoEditorModel: PhotoEditorModelProtocol {
     private var currentlyFiltering: Bool = false
     private var pendingFilterUpdate: Bool = false
     private var pixellateInputScaleValue: Float = 0.0
+    
+    private var userDefaultKey: String {
+        get {
+            return "\(Constants.pixellateUserDefaultKeyPrefix)_\(item.name)"
+        }
+    }
     
     init(with item: PhotoItem, photoEditorView: PhotoEditorView) {
         self.item = item
@@ -67,13 +76,13 @@ class PhotoEditorModel: PhotoEditorModelProtocol {
     
     func storePixellateEdits() {
         let userDefaults = UserDefaults.standard
-        userDefaults.setValue(pixellateInputScaleValue, forKey: "inputscale")
+        userDefaults.setValue(pixellateInputScaleValue, forKey: userDefaultKey)
         userDefaults.synchronize()
     }
     
     func loadPixellateEdits() {
         let userDefaults = UserDefaults.standard
-        pixellateInputScaleValue = userDefaults.float(forKey: "inputScale")
+        pixellateInputScaleValue = userDefaults.float(forKey: userDefaultKey)
         
     }
 }
@@ -86,9 +95,10 @@ extension UIImage {
         guard let image = UIImage(contentsOfFile: url.path) else {
             return nil
         }
+        
         let scale = max(maxSize.width / image.size.width, maxSize.height / image.size.height)
         let renderSize = CGSize(
-            width: image.size.height * scale,
+            width: image.size.width * scale,
             height: image.size.height * scale
         )
         let renderer = UIGraphicsImageRenderer(size: renderSize)

@@ -12,11 +12,30 @@ class PixellateFilter {
     private let internalFilter = CIFilter(name: "CIPixellate")
 
     func pixelate(image: UIImage, inputScale: Float) -> UIImage? {
-        guard let inputCGImage = image.cgImage,
-              let filter = internalFilter else {
+        guard let inputCGImage = image.cgImage else {
             return nil
         }
-        let inputImage = CIImage(cgImage: inputCGImage)
+        
+        guard let pixellatedCGImage = pixelate(image: inputCGImage, inputScale: inputScale) else {
+            return nil
+        }
+        
+        return UIImage(cgImage: pixellatedCGImage)
+    }
+    
+    func pixelate(image: CGImage, inputScale: Float) -> CGImage? {
+        guard let filter = internalFilter else {
+            return nil
+        }
+        
+        // CFPixellate requires a minimum inputScale value of 1.0
+        // If inputScale is less than 1.0, let's return the original
+        // image and don't apply the filter
+        if inputScale < 1.0 {
+            return image
+        }
+        
+        let inputImage = CIImage(cgImage: image)
         let center = CGPoint(x: inputImage.extent.width / 2, y: inputImage.extent.height / 2)
         filter.setValue(inputImage, forKey: kCIInputImageKey)
         filter.setValue(CIVector(cgPoint: center), forKey: "inputCenter")
@@ -27,6 +46,7 @@ class PixellateFilter {
         else {
             return nil
         }
-        return UIImage(cgImage: outputCGImage)
+        
+        return outputCGImage
     }
 }
