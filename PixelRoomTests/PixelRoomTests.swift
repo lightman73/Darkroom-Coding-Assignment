@@ -32,6 +32,10 @@ class PixelRoomTests: XCTestCase {
 
     // MARK: - Some simple tests
     func testGalleryDataSource() throws {
+        // Note: there is one more test that could be implemented,
+        // i.e. counting the number of images in the bundled photo
+        // library and comparing it to the number of loaded images
+        
         let datasource = GalleryDataSource()
         
         let expectation = XCTestExpectation(description: "Should load all images")
