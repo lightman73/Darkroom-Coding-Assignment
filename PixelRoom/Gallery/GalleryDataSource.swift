@@ -132,7 +132,7 @@ extension GalleryDataSource {
         let thumbnailPixellatedInputScale = ratio * pixellatedInputScale * Constants.pixellateScaleInputCorrectionFactor
         
         let thumbnailImage = UIImage(cgImage: pixellateFilter
-                                        .pixellate(image: imageReference,
+                                        .pixelate(image: imageReference,
                                                    inputScale: thumbnailPixellatedInputScale) ?? imageReference)
         return thumbnailImage
     }

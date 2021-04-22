@@ -16,14 +16,14 @@ class PixellateFilter {
             return nil
         }
         
-        guard let pixellatedCGImage = pixellate(image: inputCGImage, inputScale: inputScale) else {
+        guard let pixellatedCGImage = pixelate(image: inputCGImage, inputScale: inputScale) else {
             return nil
         }
         
         return UIImage(cgImage: pixellatedCGImage)
     }
     
-    func pixellate(image: CGImage, inputScale: Float) -> CGImage? {
+    func pixelate(image: CGImage, inputScale: Float) -> CGImage? {
         guard let filter = internalFilter else {
             return nil
         }
